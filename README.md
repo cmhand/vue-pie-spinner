@@ -1,11 +1,15 @@
 # vue-pie-spinner
 An SVG pie spinner for games
 
+## Requirements
+
+1. Use Vueify
+
 ## Usage
 
 ### app.js
 ```
-import * as VuePieSpinner from 'vue-pie-spinner';
+import VuePieSpinner from 'vue-pie-spinner';
 
 Vue.component('vue-pie-spinner', VuePieSpinner);
 ```

@@ -7,7 +7,7 @@
     "vuejs",
     "games"
   ],
-  "main": "src/index.js",
+  "main": "src/vue-pie-spinner.vue",
   "repository": {
     "type": "git",
     "url": "https://github.com/cmhand/vue-pie-spinner.git"
