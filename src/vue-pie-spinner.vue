@@ -40,26 +40,6 @@
 		box-sizing: content-box;
 	}
 
-	.btn {
-		display: block;
-		position: relative;
-		width: 75%;
-		background-color: rgba(229,5,5,1);
-		color: #fff;
-		padding: 1.2em 0;
-		font-size: 2em;
-		text-transform: uppercase;
-		border-radius: 3px;
-		text-align: center;
-		margin: 1.5em auto;
-		box-shadow: 0px 9px 0px rgba(185,0,0,1), 0px 9px 25px rgba(0,0,0,.7);
-	}
-
-	.btn:active{
-		top: 6px;
-		box-shadow: 0px 1px 0px rgba(185,0,0,1), 0px 7px 20px rgba(0,0,0,.7);
-	}
-
 	.spin {
 		transform: rotate(1080deg);
 	}
@@ -92,17 +72,12 @@
 			<div class="knob">
 			</div>
 		</div>
-		<button class="btn" @click="spin()">
-			Spin!
-		</button>
 	</div>
 </template>
 
 <script>
 	export default {
-		props: [
-			'activities'
-		],
+		props: [],
 		data() {
 			return {
 				color: ['red','orange','yellow','green','cyan','blue', "indigo", "violet"],
@@ -128,23 +103,18 @@
 			this.center = this.width / 2;
 			this.drawImg()
 		},
-		computed: {
-
-		},
+		computed: {},
 		methods: {
 			spin() {
-				if(this.activities.length > 0) {
-					setTimeout(() => {
-						this.isStopped = true;
-					}, 500);
-					this.isStopped = false;
-					this.speed = 15;
-					this.animate();
-				}
+				setTimeout(() => {
+					this.isStopped = true;
+				}, 500);
+				this.isStopped = false;
+				this.speed = 15;
+				this.animate();
 			},
 			selectRandom() {
-				let activity = Math.floor(Math.random() * this.activities.length);
-				this.$emit('onSpin', this.activities[activity]);
+				this.$emit('onSpin');
 			},
 			rand(min, max) {
 				return Math.random() * (max - min) + min;
