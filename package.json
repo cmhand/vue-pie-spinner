@@ -1,0 +1,16 @@
+{
+  "name": "vue-pie-spinner",
+  "version": "0.0.1",
+  "description": "Pie spinner for games",
+  "keywords": [
+    "spinner",
+    "vuejs",
+    "games"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmhand/vue-pie-spinner.git"
+  },
+  "author": "cmhand",
+  "license": "MIT"
+}
