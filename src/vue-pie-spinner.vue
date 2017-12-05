@@ -77,7 +77,9 @@
 
 <script>
 	export default {
-		props: [],
+		props: [
+			'colors'
+		],
 		data() {
 			return {
 				color: ['red','orange','yellow','green','cyan','blue', "indigo", "violet"],
@@ -95,6 +97,7 @@
 			}
 		},
 		mounted() {
+			this.color = this.colors ? this.colors : this.color;
 			this.slices = this.color.length;
 			this.sliceDeg = 360/this.slices;
 			let canvas = this.$el.querySelector("canvas");
